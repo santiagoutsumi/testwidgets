@@ -29,10 +29,12 @@
         </style>
         <title></title>
     </head>
-    <body>
+    <body>    	    
+        <div id="map">
+        </div>
 	    
 	    
-	    <div data-dojo-attach-point="containerNode">
+	     <div data-dojo-attach-point="containerNode">
 	<div data-dojo-type="dijit/Toolbar" data-dojo-attach-point="attributesTableToolbarDijit" data-dojo-props="class:'attributesTableToolbar'">
 		<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="attributesTableZoomDropDownButton" data-dojo-props="iconClass:'fas fa-search-plus fa-fw','class':'attributesTableZoomMenu'" style="display:none;">
 			<span>${i18n.menus.zoom.title}</span>
@@ -89,12 +91,8 @@
         <div data-dojo-attach-point="divExportLink" class="divExportLink">&nbsp;</div>
     </div>
 </div>
-       
-
 	    
-	    	    
-        <div id="map">
-        </div>
+	    
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
