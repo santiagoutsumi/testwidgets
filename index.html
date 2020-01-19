@@ -1,14 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-<html>
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<title>OptiGraze Mapping for Adaptive Pasture-based Production</title>
 
 
-<div data-dojo-attach-point="containerNode">
+
+
+    
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/filter.css">
+<link rel="stylesheet" href="css/nouislider.min.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+	    
+	    
+	    <div data-dojo-attach-point="containerNode">
 	<div data-dojo-type="dijit/Toolbar" data-dojo-attach-point="attributesTableToolbarDijit" data-dojo-props="class:'attributesTableToolbar'">
 		<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="attributesTableZoomDropDownButton" data-dojo-props="iconClass:'fas fa-search-plus fa-fw','class':'attributesTableZoomMenu'" style="display:none;">
 			<span>${i18n.menus.zoom.title}</span>
@@ -43,10 +67,10 @@
 	<div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="attributesTableGridDijit" data-dojo-props="class:'attributesTableGrid'"></div>
 </div>
 
-
-
-
-     <div>
+	
+	    
+	    
+	    <div>
     <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="containerNode" class="exportContainer">
         <div class="divTypeSection">
             <label>${i18n.selectType}:</label><br>
@@ -67,33 +91,8 @@
 </div>
        
 
-
-
-
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/filter.css">
-<link rel="stylesheet" href="css/nouislider.min.css">
-        <link rel="stylesheet" href="css/leaflet-measure.css">
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        </style>
-        <title></title>
-    </head>
-    <body>
+	    
+	    	    
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
