@@ -609,6 +609,38 @@
         });
             
         
+            exportDialog: {
+    include: true,
+    id: 'export',
+    type: 'floating',
+    path: 'widgets/Export',
+    title: 'Export',
+    options: {
+        excel: true,
+        xlsExcel: false,
+        csv: true,
+
+        shapefile: true,
+        kml: true,
+        kmz: true,
+        geojson: true,
+        topojson: true,
+        wkt: true,
+
+        defaultExportType: 'shapefile',
+
+        // this option can be a string or a function that returns
+        // a string.
+        //
+        // filename: 'my_results'
+        filename: function () {
+            var date = new Date();
+            return 'export_results_' + date.toLocaleDateString();
+        }
+    }
+}
+            
+            
             </script>
     </body>
 </html>
