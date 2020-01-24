@@ -1,3 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>OptiGraze Decision Support System for Adaptive Pasture-based Production</title>
+
+
+
+<!-- *********REPLEACE HERE THE JAVA SCRIPT CODE FROM ONEDRIVE*********** --> 
+
+
+
+<div id="myExcelDiv" style="width: 1880px; height: 840px"></div>
+
+<div id="blocker"
+
+style="z-index:100;height:33px;background:#fff;width:100%;position:absolute;bottom:0px;">
+
+
+
+<!-- * This code uses the Microsoft Office Excel Javascript object model to programmatically insert the
+* Excel Web App into a div with id=myExcelDiv. The full API is documented at
+* https://msdn.microsoft.com/en-US/library/hh315812.aspx. There you can find out how to programmatically get
+* values from your Excel file and how to use the rest of the object model. -->
+
+<script type="text/javascript" src="https://onedrive.live.com/embed?resid=4E018F6FE64C8D5F%21341&authkey=%21AO1MxCuhDyen3Ro&em=3&wdItem=%22Dashboard%22&wdDivId=%22myExcelDiv%22&wdActiveCell=%22'MODEL'!C10%22&wdAllowInteractivity=1&wdAllowTyping=1"></script>
+
+
+
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -13,80 +47,38 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         html, body, #map {
-            width: 100%;
-            height: 100%;
+            width: 50%;
+            height: 50%;
             padding: 0;
             margin: 0;
         }
         </style>
         <title>OptiGraze Mapping</title>
+
+
+<!-- *********REPLEACE HERE THE JAVA SCRIPT CODE FROM ONEDRIVE*********** --> 
+
+<div id="myExcelDiv" style="width: 1880px; height: 840px"></div>
+
+<div id="blocker"
+
+style="z-index:100;height:33px;background:#fff;width:100%;position:absolute;bottom:0px;">
+
+
+<!-- * This code uses the Microsoft Office Excel Javascript object model to programmatically insert the
+* Excel Web App into a div with id=myExcelDiv. The full API is documented at
+* https://msdn.microsoft.com/en-US/library/hh315812.aspx. There you can find out how to programmatically get
+* values from your Excel file and how to use the rest of the object model. -->
+
+<script type="text/javascript" src="https://onedrive.live.com/embed?resid=4E018F6FE64C8D5F%21341&authkey=%21AO1MxCuhDyen3Ro&em=3&wdItem=%22Dashboard%22&wdDivId=%22myExcelDiv%22&wdActiveCell=%22'MODEL'!C10%22&wdAllowInteractivity=1&wdAllowTyping=1"></script>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
     </head>
     
 	<body>  
-	<h1 id="test"> Optigraze Mapping & Decision Support System for Adaptive Grazing </h1>	
-	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"></script>    
- 
-	     <div data-dojo-attach-point="containerNode">
-	<div data-dojo-type="dijit/Toolbar" data-dojo-attach-point="attributesTableToolbarDijit" data-dojo-props="class:'attributesTableToolbar'">
-		<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="attributesTableZoomDropDownButton" data-dojo-props="iconClass:'fas fa-search-plus fa-fw','class':'attributesTableZoomMenu'" style="display:none;">
-			<span>${i18n.menus.zoom.title}</span>
-			<div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="attributesTableZoomMenu">
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableZoomToFeatures" data-dojo-attach-event="onClick:zoomToFeatureGraphics">${i18n.menus.zoom.zoomToFeatures}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableZoomToSelected" data-dojo-attach-event="onClick:zoomToSelectedGraphics">${i18n.menus.zoom.zoomToSelectedFeatures}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableZoomToSource" data-dojo-attach-event="onClick:zoomToSourceGraphics">${i18n.menus.zoom.zoomToSourceGraphics}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableZoomToBuffer" data-dojo-attach-event="onClick:zoomToBufferGraphics">${i18n.menus.zoom.zoomToBuffer}</div>
-			</div>
-		</div>
-		<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="attributesTableViewDropDownButton" data-dojo-props="iconClass:'fas fa-eye fa-fw','class':'attributesTableViewMenu'">
-			<span>${i18n.menus.view.title}</span>
-			<div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="attributesTableViewMenu">
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableViewOnlySelectedRecords" data-dojo-attach-event="onClick:showOnlySelected">${i18n.menus.view.showOnlySelectedRecords}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableViewAllRecords" data-dojo-attach-event="onClick:showAllRecords">${i18n.menus.view.showAllRecords}</div>
-			</div>
-		</div>
-		<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="attributesTableClearDropDownButton" data-dojo-props="iconClass:'fas fa-times-circle fa-fw','class':'attributesTableClearMenu'">
-			<span>${i18n.menus.clear.title}</span>
-			<div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="attributesTableClearMenu">
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearFeatures" data-dojo-attach-event="onClick:clearFeatures">${i18n.menus.clear.clearFeatures}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearSelected" data-dojo-attach-event="onClick:clearSelectedFeatures">${i18n.menus.clear.clearSelectedFeatures}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearSource" data-dojo-attach-event="onClick:clearSourceGraphics">${i18n.menus.clear.clearSourceGraphics}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearBuffer" data-dojo-attach-event="onClick:clearBufferGraphics">${i18n.menus.clear.clearBufferGraphics}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearGrid" data-dojo-attach-event="onClick:clearGrid">${i18n.menus.clear.clearGrid}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearAll" data-dojo-attach-event="onClick:clearAll">${i18n.menus.clear.clearAll}</div>
-				<div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="attributesTableClearSelectedRecords" data-dojo-attach-event="onClick:clearSelected">${i18n.menus.clear.clearSelectedRecords}</div>
-			</div>
-		</div>
-        <div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fas fa-download fa-fw','class':'attributesTableExportMenu'"data-dojo-attach-point="attributesTableExportButton" data-dojo-attach-event="onClick:openExport">${i18n.menus.export.title}</div>
-	</div>
-	<div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="attributesTableGridDijit" data-dojo-props="class:'attributesTableGrid'"></div>
-</div>
-
+	<h1 id="test"> Optigraze Mapping & Decision Support System </h1>	
 	
-	    
-	    
-	    <div>
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="containerNode" class="exportContainer">
-        <div class="divTypeSection">
-            <label>${i18n.selectType}:</label><br>
-            <select style="width:100%;" data-dojo-attach-point="selectExportType" data-dojo-type="dijit/form/Select" data-dojo-attach-event="onChange:onExportTypeChange"></select>
-        </div>
-        <div data-dojo-attach-point="divWkidSection" class="divWkidSection">
-            <label>${i18n.selectProjection}:</label><input style="margin-left:5px;width:60px;" ddata-dojo-props="disabled:true" data-dojo-attach-point="inputWkid" data-dojo-type="dijit/form/TextBox" value="4326" data-dojo-attach-event="onChange:onWkidChange"/><br/>
-            <div data-dojo-attach-point="divWkidTextSection" class="divWkidTextSection">
-                <label data-dojo-attach-point="labelWkid">${i18n.projection}:</label><br/>
-                <div data-dojo-attach-point="divWkidText" class="divWkidText"></div>
-            </div>
-        </div>
-        <div class="divExportButton">
-            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fas fa-download fa-fw',showLabel:true,disabled:true" data-dojo-attach-point="btnExport" data-dojo-attach-event="click:doExport">${i18n.export}</button>
-        </div>
-        <div data-dojo-attach-point="divExportLink" class="divExportLink">&nbsp;</div>
-    </div>
-</div>	    
-	
-	   
-	    
-	    
         <div id="map">
         </div>
 	    
